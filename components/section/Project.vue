@@ -24,7 +24,8 @@
     >
       <!-- style="background-image:url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg')" -->
       <!-- :style="`background-image:url('${project.img[0]}')'`" -->
-      <a 
+      <a
+        v-if="project.img.length === 1" 
         class="project-image"
         :class="project.img[0].direction"
         @click="openProject(project)"
@@ -34,6 +35,24 @@
           :src="project.img[0].img" 
           :alt="project.name"
         >
+      </a>
+      <a
+        v-else-if="project.img.length > 1"
+        class="many-images"
+        @click="openProject(project)"
+      >
+        <div 
+          v-for="(image, index) in project.img"
+          class="image-container"
+          :class="`image-container-${index}`"
+        >
+          <div class="overlay"></div>
+
+          <img 
+            :src="image.img" 
+            :alt="project.name"
+          >
+        </div>
       </a>
       <div class="project-bottom">
         <div class="project-section">
@@ -107,6 +126,50 @@
       .project-section{
         // width: 50%;
       }
+      .many-images{
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        cursor: pointer;
+        .image-container{
+          position: absolute;
+          height: 300px;
+          // filter: blur(1px);
+          transition: all .3s;
+          z-index: 2;
+          &:nth-child(2){
+            left: 100px;
+            top: -10px;
+            height: 320px;
+            z-index: 3;
+          }
+          &:nth-child(3){
+            left: 200px;
+            height: 340px;
+            top: -20px;
+            z-index: 4;
+          }
+          &:nth-child(4){
+            left: 300px;
+            height: 360px;
+            top: -30px;
+            z-index: 5;
+          }
+          &:hover{
+            z-index: 6;
+            // filter: blur(0);
+            transform: scale(1.05);
+            .overlay{
+            background: rgba(151, 225, 241, 0);
+          }
+
+          }
+        }
+        img{
+          height: 100%;
+          border-radius: 5px;
+        }
+      }
       .overlay{
         position: absolute;
         width: 100%;
@@ -122,11 +185,14 @@
         display: flex;
         justify-content: center;
         height: 300px;
+        transition: all .3s;
         cursor: pointer;
         img{
           height: 100%;
+          border-radius: 5px;
         }
         &:hover{
+          transform: scale(1.05);
           .overlay{
             background: rgba(151, 225, 241, 0);
           }
@@ -136,7 +202,7 @@
       .project-bottom{
         position: absolute; 
         width: 50%;  
-        z-index: 2;    
+        z-index: 10;    
       }
       .project-desc{
         padding: 18px;

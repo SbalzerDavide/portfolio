@@ -1,7 +1,7 @@
 interface Work {
   company: string,
   companyLink?: string,
-  role: 'Full Stack Developer' | 'Frontend Developer',
+  role: string,
   start: string,
   end: string,
   descriptions: string[]
@@ -15,10 +15,9 @@ const works: Work[] = [
     start: "March 2021",
     end: "Present",
     descriptions: [
-      "Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more",
-      "Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements",
+      "Design, maintenance and updating of a web application that makes management software available on every device.",
       "Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders",
-      "Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship"
+      "Directly collaborate with final costumers for develop customizations on specific realities"
     ]
   },
   {
@@ -27,18 +26,20 @@ const works: Work[] = [
     start: "January 2021",
     end: "April 2023",
     descriptions: [
-      "I work in various projects, from the smallest, maybe only for study a new languages o technology, to 'real product' witch are born from a specific use and witch are used to help everyday work.",
-      "This second type of projects allow me to study all the cycle life of a digital product, from preliminary study to its implementation.",
+      "I work in various projects, from the smallest, maybe only for study a new language or technology, to 'real product' witch are born from a specific use and witch are used to help everyday work.",
+      "This second type of projects allow me to study all the cycle life of a digital product, from preliminary study to it's implementation.",
       "Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship",
       "Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more"
     ]
   },
   {
-    company: "pappa",
-    role: "Full Stack Developer",
-    start: "",
-    end: "",
-    descriptions: []
+    company: "Boolean Careers",
+    role: "Junior Full Stack Web Developer Trainee",
+    start: "September 2020",
+    end: "February 2021",
+    descriptions: [
+      "In full time six month I made many practical projects with technologies studied theoretically."
+    ]
   }
 ]
 

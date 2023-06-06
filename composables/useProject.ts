@@ -17,10 +17,19 @@ interface Project {
   year?: string,
 }
 
-import imgRotella from "~/assets/images/rotellaOstetrica.png";
-import imgFormForPrint from "~/assets/images/formForPrint.png";
-import imgFoodManager from "~/assets/images/foodManagerStorage.png";
-import imgMineField from "~/assets/images/minefield.png";
+import rotellaOstetrica from "~/assets/images/rotellaOstetrica.png";
+
+import formForPrint from "~/assets/images/formForPrint.png";
+import formForPrint1 from "~/assets/images/formForPrint1.png";
+import formForPrint2 from "~/assets/images/formForPrint2.png";
+
+import foodManagerStorage from "~/assets/images/foodManagerStorage.png";
+import foodManagerDelete from "~/assets/images/foodManagerDelete.png";
+import foodManagerGarbage from "~/assets/images/foodManagerGarbage.png";
+import foodManagerStorageFilter from "~/assets/images/foodManagerStorageFilter.png";
+
+import minefield from "~/assets/images/minefield.png";
+import minefield1 from "~/assets/images/minefield1.png";
 
 const projects: Project[] = [
   {
@@ -41,7 +50,7 @@ const projects: Project[] = [
     ],
     img:[
       {
-        img: imgRotella,
+        img: rotellaOstetrica,
         direction: "portrait" 
       }
     ],
@@ -65,9 +74,17 @@ const projects: Project[] = [
     ],
     img:[
       {
-        img: imgFormForPrint,
+        img: formForPrint,
         direction: "landscape" 
-      }
+      },
+      // {
+      //   img: formForPrint1,
+      //   direction: "landscape" 
+      // },
+      // {
+      //   img: formForPrint2,
+      //   direction: "landscape" 
+      // },      
     ],
     year: "2023"
   },
@@ -90,9 +107,21 @@ const projects: Project[] = [
     ],
     img: [
       {
-        img: imgFoodManager,
+        img: foodManagerStorage,
         direction: "portrait"
-      }
+      },
+      {
+        img: foodManagerStorageFilter,
+        direction: "portrait"
+      },
+      {
+        img: foodManagerDelete,
+        direction: "portrait"
+      },
+      {
+        img: foodManagerGarbage,
+        direction: "portrait"
+      },
     ],
     year: "2022"
   },
@@ -114,9 +143,13 @@ const projects: Project[] = [
     ],
     img: [
       {
-        img: imgMineField,
+        img: minefield,
         direction: "landscape"
-      }
+      },
+      // {
+      //   img: minefield1,
+      //   direction: "landscape"
+      // }
     ],
     year: "2021"
   },
