@@ -28,8 +28,6 @@ const works: Work[] = [
     descriptions: [
       "I work in various projects, from the smallest, maybe only for study a new language or technology, to 'real product' witch are born from a specific use and witch are used to help everyday work.",
       "This second type of projects allow me to study all the cycle life of a digital product, from preliminary study to it's implementation.",
-      "Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship",
-      "Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more"
     ]
   },
   {

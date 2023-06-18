@@ -65,7 +65,7 @@ const projects: Project[] = [
         type: "gitHub"
       },
       {
-        link: "https://sbalzerdavide.github.io/formForPrint/",
+        link: "https://formforprint-trial.netlify.app/",
         type: "project"
       }
     ],
