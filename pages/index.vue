@@ -19,7 +19,7 @@
       :title="menuEl.title"
       :desc="menuEl.desc"
     />
-    <ScrollTop :threshold="100" class="custom-scrolltop" icon="pi pi-arrow-up" />
+    <ScrollTop :threshold="100" icon="pi pi-arrow-up" />
   </div>
 </template>
 
