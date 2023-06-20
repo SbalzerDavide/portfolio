@@ -4,6 +4,11 @@
   padding: 20px 0;
   justify-content: space-between;
   font-family: $font-mono;
+  .navbar-right{
+    i{
+      display: none;
+    }
+  }
   ul{
     display: flex;
     list-style: none;
@@ -25,3 +30,20 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .navbar{
+    .navbar-right{
+      i{
+        display: block;
+      }
+    }
+    ul{
+      display: none;
+      &.show-on-mobile{
+        display: block;
+      }
+    }
+  }
+}
+

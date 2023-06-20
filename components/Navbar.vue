@@ -1,5 +1,9 @@
 <script setup>
   const menu = useMenu();
+  const mobileMenu = ref(false);
+  function toggleMenuMobile() {
+    mobileMenu.value = !mobileMenu.value
+  }
 </script>
 
 <template>
@@ -8,7 +12,11 @@
       <i class="pi pi-home"></i>
     </div>
     <div class="navbar-right">
-      <ul class="menu">
+      <i class="pi pi-bars" @click="toggleMenuMobile"></i>
+      <ul 
+        class="menu"
+        :class="mobileMenu ? 'show-on-mobile' : ''"
+      >
         <li 
           v-for="(menuEl, index) in menu" 
           :key="index"
