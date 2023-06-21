@@ -11,23 +11,29 @@
     <div class="navbar-left">
       <i class="pi pi-home"></i>
     </div>
-    <div class="navbar-right">
-      <i class="pi pi-bars" @click="toggleMenuMobile"></i>
-      <ul 
-        class="menu"
-        :class="mobileMenu ? 'show-on-mobile' : ''"
-      >
-        <li 
-          v-for="(menuEl, index) in menu" 
-          :key="index"
-          :id="`navbar-menu-${menuEl.menuKey}`"
+    <div 
+      class="navbar-right"
+      :class="mobileMenu ? 'navbar-right-mobile' : ''"
+    >
+      <div class="right-container">
+        <div v-if="mobileMenu" class="mobile-blur"></div>
+        <i class="pi pi-bars" @click="toggleMenuMobile"></i>
+        <ul 
+          class="menu"
+          :class="mobileMenu ? 'show-on-mobile' : ''"
         >
-        <a :href="`#${menuEl.title}`">
-          <div class="menu-key">{{ menuEl.menuKey }}.</div>
-          <div class="menu-desc">{{ menuEl.title }}</div>
-        </a>
-        </li>
-      </ul>
+          <li 
+            v-for="(menuEl, index) in menu" 
+            :key="index"
+            :id="`navbar-menu-${menuEl.menuKey}`"
+          >
+          <a :href="`#${menuEl.title}`">
+            <div class="menu-key">{{ menuEl.menuKey }}.</div>
+            <div class="menu-desc">{{ menuEl.title }}</div>
+          </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <!-- <h2
     @click="navigateTo('/')"
