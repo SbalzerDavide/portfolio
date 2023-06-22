@@ -27,7 +27,10 @@
             :key="index"
             :id="`navbar-menu-${menuEl.menuKey}`"
           >
-          <a :href="`#${menuEl.title}`">
+          <a 
+            :href="`#${menuEl.title}`"
+            @click="toggleMenuMobile"
+          >
             <div class="menu-key">{{ menuEl.menuKey }}.</div>
             <div class="menu-desc">{{ menuEl.title }}</div>
           </a>
