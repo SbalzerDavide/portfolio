@@ -67,7 +67,7 @@
         }
       }
       .mobile-blur{
-        // position: fixed;
+        // position: absolute;
         // top: 0;
         // left: 0;
         // right: 0;
@@ -79,6 +79,7 @@
       // display: none;
       display: flex;
       flex-direction: column;
+      flex-grow: 1;
       position: relative;
       left: 100%;
       width: 300px;
@@ -86,6 +87,9 @@
       &.show-on-mobile{
         // display: block;
         left: 0;
+      }
+      li{
+        padding: 30px 0;
       }
     }
   }

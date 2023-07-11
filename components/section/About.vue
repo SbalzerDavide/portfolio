@@ -16,13 +16,14 @@
     <div class="container-text">
       <div class="decription">
         <p>
-          Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+          Hello! My name is Davide and I enjoy creating things that live on the internet. My interest in web development started in 2020 when I try to create a website that allow me to take and process data from a survey about different visual art works. All obstacle I found using high level tool pushed me to study web development from the basic.
+          I signed up for a six mounth full time online course, Boolean Careers, and from that moment I never stop to learning something new.
         </p>
         <p>
-          Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
+          Currently I work for a software house where I develop the web app of a business management software. Next to this I work on personal project for study and try different technology. Some of this are only prototype but other were born from specific need and are used by others. 
         </p>
         <p>
-          I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
+          I am a very curious person and I love to go deep into the study of new things.
         </p>
 
       </div>
