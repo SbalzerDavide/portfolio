@@ -2,6 +2,8 @@
   <div id="app">
     <Navbar />
     <NuxtPage />
+    <navbarMobile />
+    <div class="cover"></div>
   </div>
 </template>
 

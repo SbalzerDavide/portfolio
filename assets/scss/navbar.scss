@@ -9,49 +9,69 @@
       display: none;
     }
   }
-  ul{
+}
+.navbar ul, .navbar-mobile ul{
+  display: flex;
+  list-style: none;
+  a{
     display: flex;
-    list-style: none;
-    a{
-      display: flex;
-      align-items: center;
-      color: $text-color;
-      margin: 0 20px;
-      text-decoration: none;
-      cursor: pointer;
-      .menu-key{
-        color: $primary;
-        margin-right: 5px;
-      }
+    align-items: center;
+    color: $text-color;
+    margin: 0 20px;
+    text-decoration: none;
+    cursor: pointer;
+    .menu-key{
+      color: $primary;
+      margin-right: 5px;
     }
   }
-  i{
-    font-size: 30px;
-    cursor: pointer;
-  }
+}
+i{
+  font-size: 30px;
+  cursor: pointer;
+}
+.navbar-mobile{
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
   .navbar{
-    height: 105px;
+    display: none;
+  }
+  .navbar-mobile{
+    display: flex;
+    position: fixed;
+    top: 0;
+    // bottom: 0;
+    left: 0;
+    right: 0;
+    // height: 105px;
+    // align-items: center;
+    // padding: 20px;
+    justify-content: space-between;
+    font-family: $font-mono;
+    i{
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+    }
+  
     .navbar-right{
       display: flex;
       align-items: center;
+      position: relative;
       .right-container{
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
       }
-      i{
-        display: flex;
-        align-items: center;
-      }
       &.navbar-right-mobile{
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        display: flex;
+        display: inline-flex;
+        height: 100vh;
         flex-direction: row-reverse;
         background-color: #282a36;
         box-shadow: -5px 5px 15px -3px rgba(0,0,0,0.2);
@@ -66,22 +86,23 @@
           align-self: flex-end;
         }
       }
-      .mobile-blur{
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
-        // filter: blur(2px);
-      }
     }
+    // .mobile-blur{
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   filter: blur(2px);
+    //   background-color: red;
+    // }
     ul{
       // display: none;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
       position: relative;
-      left: 100%;
+      left: 110%;
       width: 300px;
       transition: all .5s;
       &.show-on-mobile{
