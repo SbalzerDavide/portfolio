@@ -1,3 +1,8 @@
+<script setup lang="ts">
+  const appConfig = useAppConfig();
+  console.log(appConfig);  
+  // appConfig.language = "en"
+</script>
 <template>
   <div id="app">
     <Navbar />
