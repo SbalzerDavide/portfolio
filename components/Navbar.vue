@@ -9,7 +9,8 @@
 <template>
   <nav class="navbar">
     <div class="navbar-left">
-      <i class="pi pi-home"></i>
+      <!-- <i class="pi pi-home"></i> -->
+      <switchLang />
     </div>
     <div 
       class="navbar-right"
