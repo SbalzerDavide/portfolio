@@ -1,14 +1,32 @@
 <script setup lang="ts">
   import ScrollTop from 'primevue/scrolltop';
   const menu = useMenu();
+  const appConfig = useAppConfig();
+
 </script>
 
 <template>
   <div class="container">
     <header>
-      <h4>Hi, my name is Davide Sbalzer</h4>
-      <h1>I build things for the web.</h1>
-      <p>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.</p>
+      <h4 v-if="appConfig.language == 'en'">
+        Hi, my name is Davide Sbalzer
+      </h4>
+      <h4 v-else-if="appConfig.language == 'it'">
+        Ciao, mi chiamo Davide Sbalzer
+      </h4>
+
+      <h1 v-if="appConfig.language =='en'">
+        I build things for the web.
+      </h1>
+      <h1 v-else-if="appConfig.language == 'it'">
+        Costruisco cose per il web
+      </h1>
+
+      <p v-else-if="appConfig.language == 'en'">
+        I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.
+      </p>
+      <p v-else-if="appConfig.language == 'it'">
+      </p>
     </header>
     <!-- :id="`box-${menuEl.menuKey}`" -->
     <Box

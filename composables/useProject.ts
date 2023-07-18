@@ -3,17 +3,22 @@ interface ProjLink {
   type: string
 }
 
-interface projImage {
+interface ProjImage {
   img: any,
   direction: "portrait" | "landscape"
 }
 
+interface Languages {
+  en: string, 
+  it: string
+}
+
 interface Project {
   name: string, 
-  description: string, 
+  description: Languages, 
   link?: ProjLink[], 
   technology: string[],
-  img: projImage[],
+  img: ProjImage[],
   year?: string,
 }
 
@@ -34,7 +39,10 @@ import minefield1 from "~/assets/images/minefield1.png";
 const projects: Project[] = [
   {
     name: "Rotella ostetrica",
-    description: "Mobile web app that manage gestation age measered in weeks. Usefull for hospital staff that have to books visits in specific weeks.",
+    description:{
+      en: "Mobile web app that manage gestation age measered in weeks. Usefull for hospital staff that have to books visits in specific weeks.",
+      it: "Web app mobile che gestisce l'epoca gestazionale misurata in settimane. Utile per il personale ospedaliero che deve prenotare visite per specifiche settimane."
+    },
     link: [
       {
         link: "https://github.com/SbalzerDavide/rotella.io",
@@ -58,7 +66,10 @@ const projects: Project[] = [
   },
   {
     name: "Form for Print",
-    description: "A web app, prepared for all stages of a pregnancy, that elaborate patient history and all ultrasound data for generate a print with charts and percentiles.",
+    description: {
+      en : "A web app, prepared for all stages of a pregnancy, that elaborate patient history and all ultrasound data for generate a print with charts and percentiles.",
+      it: "Una web app, preparata per tutte le fasi della gravidanza, che elabora la storia clinica del paziente e tutti i dati dell'ecografia per generare una stampa con grafici e percentili."
+    },    
     link: [
       {
         link: "https://github.com/SbalzerDavide/formForPrint",
@@ -90,7 +101,10 @@ const projects: Project[] = [
   },
   {
     name: "food manager",
-    description: "Mobile web app that allow to manage all the life cycle of food, since when it was put in the shopping list until it is eaten or thrown away. Various statistics can be consulted for understand the efficiency of its management over time",
+    description: {
+      en: "Mobile web app that allow to manage all the life cycle of food, since when it was put in the shopping list until it is eaten or thrown away. Various statistics can be consulted for understand the efficiency of its management over time",
+      it: "Web app mobile che consente di gestire l'intero ciclo di vita del cibo, dalla sua aggiunta alla lista della spesa fino al momento in cui viene consumato o buttato via. È possibile consultare varie statistiche per comprendere la nostra efficienza della sua gestione nel tempo." 
+    },
     link: [
       {
         link: "https://github.com/SbalzerDavide/supabaseProject",
@@ -127,7 +141,10 @@ const projects: Project[] = [
   },
   {
     name: "Mine Field",
-    description: "Classic game designed with '80 graphics",
+    description: {
+      en: "Classic game designed with '80 graphics",
+      it: "Videogame classico sisegnato con una grafica anni '80" 
+    },
     link: [
       {
         link: "https://github.com/SbalzerDavide/vue-campominato.io",

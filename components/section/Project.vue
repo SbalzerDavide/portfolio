@@ -4,6 +4,8 @@
 
   import { Project } from "~/composables/useProject"
 
+  const appConfig = useAppConfig();
+
   function openProject(project: Project) {
     let projLink = project.link?.find((el)=> el.type === "project");
     if(projLink){
@@ -11,7 +13,6 @@
     } else{
       console.log("link not found");
     }
-    
   }
 
 </script>
@@ -59,7 +60,12 @@
           <h4>Personal Project</h4>
           <h2>{{ project.name }}</h2>
           <div class="project-desc">
-            <p>{{ project.description }}</p>
+            <p v-if="appConfig.language == 'en'">
+              {{ project.description.en }}
+            </p>
+            <p v-else-if="appConfig.language == 'it'">
+              {{ project.description.it }}
+            </p>
           </div>
         </div>
         <ul class="project-technology">

@@ -7,6 +7,8 @@
 
   let activeWork = ref(works[active.value]);
 
+  const appConfig = useAppConfig();
+
   watch(active, (newValue)=>{
     if(activeLine.value){
       activeLine.value.style.top = `${active.value * 30}px`;
@@ -44,8 +46,18 @@
       <div class="work-desc-container">
         <div 
           class="work-desc"
-          v-for="(desc, index) in activeWork.descriptions"
+          v-if="appConfig.language == 'en'"
+          v-for="(desc, index) in activeWork.descriptions.en"
           :key="index"
+        >
+          <i class="pi pi-caret-right"></i>
+          <p>{{ desc }}</p>
+        </div>
+        <div 
+          class="work-desc"
+          v-else-if="appConfig.language == 'it'"
+          v-for="(desc, i) in activeWork.descriptions.it"
+          :key="i"
         >
           <i class="pi pi-caret-right"></i>
           <p>{{ desc }}</p>
