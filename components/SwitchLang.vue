@@ -1,6 +1,8 @@
 <script setup lang="ts">
   const showSelect = ref(false);
   const appConfig = useAppConfig();
+  const detectOutsideClick = useDetectOutsideClick();
+
   const languages: string[] = [
     "it",
     "en"
@@ -10,10 +12,15 @@
     showSelect.value = false;
   }
 
+  const switchLang = ref();
+  detectOutsideClick(switchLang, () => { 
+    showSelect.value = false;
+  })
+
  </script>
 
 <template>
-  <div class="switch-lang">
+  <div ref="switchLang" class="switch-lang">
     <div 
       class="active-lang"
       @click="showSelect = !showSelect"

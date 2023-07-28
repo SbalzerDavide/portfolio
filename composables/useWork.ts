@@ -22,12 +22,12 @@ const works: Work[] = [
     descriptions: {
       en: [
         "Design, maintenance and updating of a web application that makes management software available on every device.",
-        "Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders",
-        "Directly collaborate with final costumers for develop customizations on specific realities"
+        "Preliminary study to collect current and future needs through collaborations with product distributors.",
+        "Directly collaborate with final costumers for develop customizations on specific realities."
       ],
       it: [
-        "Progettazione, manutenzione e aggiornamento di un'applicazione web che rende il software di gestione disponibile su ogni dispositivo.",
-        "Collaborazione con designer, project manager e altri ingegneri per trasformare i concetti creativi in realtà produttive per clienti e stakeholder.",
+        "Progettazione, manutenzione e aggiornamento di un'applicazione web che rende il software gestionale disponibile su ogni dispositivo.",
+        "Studio preliminare per raccogliere esigenze attuali e future attraverso collaborazioni con i distributori del prodotto.",
         "Collaborazione diretta con i clienti finali per sviluppare personalizzazioni su realtà specifiche."
       ]
     } 
@@ -43,7 +43,7 @@ const works: Work[] = [
        "This second type of projects allow me to study all the cycle life of a digital product, from preliminary study to it's implementation.",
      ], 
      it: [
-      "Lavoro in vari progetti, dai più piccoli, magari solo per studiare una nuova lingua o tecnologia, ai 'veri prodotti' che nascono da un uso specifico e che vengono utilizzati per aiutare il lavoro quotidiano.",
+      "Lavoro in vari progetti, dai più piccoli, magari solo per studiare un nuovo linguaggio o tecnologia, a 'veri prodotti' che nascono da un'esigenza specifica e che vengono utilizzati per semplificare il lavoro quotidiano.",
       "Questo secondo tipo di progetti mi permette di studiare l'intero ciclo di vita di un prodotto digitale, dalla fase di studio preliminare alla sua implementazione."
      ] 
     }
@@ -58,7 +58,7 @@ const works: Work[] = [
         "In full time six month I made many practical projects with technologies studied theoretically."
       ], 
       it: [
-        "In sei mesi a tempo pieno ho realizzato molti progetti pratici con tecnologie studiate teoricamente."
+        "In sei mesi full time ho realizzato molti progetti pratici con tecnologie studiate teoricamente."
       ]
     } 
   }

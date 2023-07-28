@@ -24,7 +24,7 @@
           I signed up for a six mounth full time online course, Boolean Careers, and from that moment I never stop to learning something new.
         </p>
         <p v-else-if="appConfig?.language == 'it'">
-          Ciao! Mi chiamo Davide e mi piace creare cose su internet. Il mio interesse per lo sviluppo web è iniziato nel 2020 quando ho provato a creare un sito web che mi permettesse di raccogliere e processare i dati da un sondaggio su diverse opere d'arte visive. Tutti gli ostacoli che ho trovato usando strumenti di alto livello mi hanno spinto a studiare lo sviluppo web dalle basi.
+          Ciao! Mi chiamo Davide e mi piace creare cose su internet. Il mio interesse per lo sviluppo web è iniziato nel 2020 quando ho provato a creare un sito web che mi permettesse di raccogliere e processare i dati da un sondaggio su diverse opere d'arte visiva. Tutti gli ostacoli che ho trovato usando strumenti di alto livello mi hanno spinto a studiare lo sviluppo web dalle basi.
           Mi sono iscritto a un corso online full time di sei mesi, Boolean Careers, e da quel momento non ho mai smesso di imparare qualcosa di nuovo.
         </p>
 
@@ -32,7 +32,7 @@
           Currently I work for a software house where I develop the web app of a business management software. Next to this I work on personal project for study and try different technology. Some of this are only prototype but other were born from specific need and are used by others. 
         </p>
         <p v-else-if="appConfig.language == 'it'">
-          Attualmente lavoro per una software house dove sviluppo l'app web di un software di gestione aziendale. Oltre a questo, lavoro su progetti personali per studio e provo diverse tecnologie. Alcuni di questi sono solo prototipi, ma altri sono nati da esigenze specifiche e vengono quotidianamente utilizzati.
+          Attualmente lavoro per una software house dove sviluppo l'applicazione web di un software di gestione aziendale. Oltre a questo, lavoro su progetti personali per studiare e provare diverse tecnologie. Alcuni di questi sono solo prototipi, ma altri sono nati da esigenze specifiche e vengono quotidianamente utilizzati.
         </p>
 
         <p v-if="appConfig.language == 'en'">

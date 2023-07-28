@@ -1,6 +1,8 @@
 <script setup>
   const menu = useMenu();
   const mobileMenu = ref(false);
+  const appConfig = useAppConfig();
+
   function toggleMenuMobile() {
     mobileMenu.value = !mobileMenu.value
   }
@@ -10,7 +12,17 @@
   <nav class="navbar">
     <div class="navbar-left">
       <!-- <i class="pi pi-home"></i> -->
-      <switchLang />
+      <!-- <switchLang /> -->
+      <button class="animate">
+      <div class="background"></div>
+      <a v-if="appConfig.language === 'en'" href="~/assets/resume/DavideSbalzer_CV_en.pdf"  target="_blank" class="button">
+        Resume
+      </a>
+      <a v-else-if="appConfig.language === 'it'" href="../assets/resume/DavideSbalzer_CV_it.pdf"  target="_blank" class="button">
+        Resume
+      </a>
+    </button>
+
     </div>
     <div 
       class="navbar-right"
@@ -23,6 +35,9 @@
           class="menu"
           :class="mobileMenu ? 'show-on-mobile' : ''"
         >
+          <li>
+            <switchLang />
+          </li>
           <li 
             v-for="(menuEl, index) in menu" 
             :key="index"
@@ -39,17 +54,6 @@
         </ul>
       </div>
     </div>
-    <!-- <h2
-    @click="navigateTo('/')"
-    >
-      goHome
-    </h2>
-    <MyTitle />
-    <h2
-      @click="navigateTo('/myPage')"
-    >
-      goTo myPage
-    </h2> -->
   </nav>
 </template>
 
