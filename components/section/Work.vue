@@ -37,8 +37,9 @@
     <div class="detail">
       <!-- {{ active }} -->
       <div class="work-title">
-        <div class="role">{{ activeWork.role }}</div>  
-        <a :href="activeWork.companyLink"> @ {{ activeWork.company }}</a>
+        <div class="role">{{ activeWork.role }}
+          <a :href="activeWork.companyLink"> @ {{ activeWork.company }}</a>
+        </div>  
       </div>
       <div class="work-time">
         {{ activeWork.start }} - {{ activeWork.end }}
@@ -105,6 +106,7 @@
         font-size: 22px;
         color: $text-color-strong;
         margin-bottom: 10px;
+        cursor: pointer;
         a{
           margin-left: 5px;
           color: $primary;
@@ -127,4 +129,31 @@
       }
     }
   }
+  @media screen and (max-width: 600px) {
+    .work{
+      flex-direction: column;
+      .list{
+        margin-bottom: 10px;
+        width: 100%;
+        overflow: auto;
+        ul{
+          display: flex;
+          padding-bottom: 10px;
+          li{
+            margin: 0 10px;
+            flex-shrink: 0;
+          }
+        }
+        .active-line-container{
+          display: none;
+        }
+      }
+      .detail{
+        .work-title, .work-time, .work-desc-container{
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
 </style>

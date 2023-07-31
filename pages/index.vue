@@ -70,4 +70,15 @@
   .p-scrolltop{
     padding: 10px;
   }
+  @media screen and (max-width: 600px) {
+    header{
+      h1{
+        font-size: 50px;
+      }
+    }
+    .container{
+      padding: 0 20px;
+    }
+  }
+
 </style>

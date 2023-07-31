@@ -245,4 +245,24 @@
       }
     }
   }
+  @media screen and (max-width: 600px) {
+    .projects{
+      .project{
+        min-height: 300px;
+        .project-image, .many-images{
+          display: none;
+        }
+        .project-bottom{
+          position: relative;
+          width: 100%;
+        }
+        &:nth-child(odd){
+          .project-bottom{
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
 </style>

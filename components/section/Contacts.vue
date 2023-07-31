@@ -1,7 +1,13 @@
+<script setup>
+  const appConfig = useAppConfig();
+</script>
+
 <template>
   <div class="contacts">
-    <h3>Get In Touch</h3>
-    <p>My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+    <h3 v-if="appConfig.language === 'en'">Get In Touch</h3>
+    <h3 v-else-if="appConfig.language === 'it'">Mettiti in contatto</h3>
+    <p v-if="appConfig.language === 'en'">My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+    <p v-else-if="appConfig.language === 'it'">La mia casella di posta è sempre aperta. Se hai proposte, domande o semplicemente vuoi salutarmi, farò del mio meglio per risponderti!</p>
     <button class="animate">
       <div class="background"></div>
       <a href= "mailto:sbalzerdavide@hotmail.it" class="button">

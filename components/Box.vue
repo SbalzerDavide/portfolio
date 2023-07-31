@@ -60,4 +60,10 @@
       margin-left: 80px;
     }
   }
+  @media screen and (max-width: 600px) {
+    .box:nth-child(odd){
+      margin-left: 0;
+    }
+  }
+
 </style>

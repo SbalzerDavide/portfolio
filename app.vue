@@ -7,7 +7,7 @@
   <div id="app">
     <Navbar />
     <NuxtPage />
-    <navbarMobile />
+    <!-- <navbarMobile /> -->
     <div class="cover"></div>
   </div>
 </template>

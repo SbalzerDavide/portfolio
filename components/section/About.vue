@@ -75,9 +75,11 @@
   @import '~/assets/scss/common.scss';
   .about{
     display: flex;
+    // flex-wrap: wrap;
     .container-text{
       padding-right: 30px;
       width: 60%;
+      // min-width: 300px;
       p{
         margin-bottom: 20px;
       }
@@ -143,4 +145,14 @@
       }
     }
   } 
+  @media screen and (max-width: 600px) {
+    .about{
+      flex-direction: column;
+      align-items: stretch;
+      .container-text, .container-image{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
 </style>

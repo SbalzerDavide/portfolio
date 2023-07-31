@@ -47,6 +47,7 @@
   .switch-lang{
     position: relative;
     user-select: none; 
+    text-transform: uppercase;
   }
   .selection{
     position: absolute;

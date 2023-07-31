@@ -3,6 +3,9 @@
   const mobileMenu = ref(false);
   const appConfig = useAppConfig();
 
+  // const resumes = useResume();
+  // console.log(resumes.a);
+
   function toggleMenuMobile() {
     mobileMenu.value = !mobileMenu.value
   }
@@ -15,14 +18,13 @@
       <!-- <switchLang /> -->
       <button class="animate">
       <div class="background"></div>
-      <a v-if="appConfig.language === 'en'" href="~/assets/resume/DavideSbalzer_CV_en.pdf"  target="_blank" class="button">
+      <a v-if="appConfig.language === 'en'" href="./resume/DavideSbalzer_CV_en.pdf"  target="_blank" class="button">
         Resume
       </a>
-      <a v-else-if="appConfig.language === 'it'" href="../assets/resume/DavideSbalzer_CV_it.pdf"  target="_blank" class="button">
+      <a v-else-if="appConfig.language === 'it'" href="./resume/DavideSbalzer_CV_it.pdf"  target="_blank" class="button">
         Resume
       </a>
     </button>
-
     </div>
     <div 
       class="navbar-right"
@@ -60,4 +62,8 @@
 <style lang="scss" scoped>
   @import '~/assets/scss/common.scss';
   @import '~/assets/scss/navbar.scss';
+  img{
+    width: 20px;
+    height: 20px;
+  }
 </style>
