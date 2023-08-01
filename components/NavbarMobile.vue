@@ -1,14 +1,23 @@
 <script setup>
   const menu = useMenu();
   const mobileMenu = ref(false);
+  const detectOutsideClick = useDetectOutsideClick();
+
   function toggleMenuMobile() {
     mobileMenu.value = !mobileMenu.value;
-    console.log(mobileMenu.value)
   }
+
+  const mobileNavbar = ref();
+  detectOutsideClick(mobileNavbar, () => { 
+    if(mobileMenu.value === true){
+      mobileMenu.value = false;
+    }
+  })
+
 </script>
 
 <template>
-  <nav class="navbar-mobile">
+  <nav ref="mobileNavbar" class="navbar-mobile">
     <div v-if="mobileMenu" class="mobile-blur"></div>
     <i class="pi pi-bars" @click="toggleMenuMobile"></i>
 

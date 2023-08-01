@@ -50,6 +50,7 @@ i{
     // padding: 20px;
     justify-content: space-between;
     font-family: $font-mono;
+    z-index: 10;
     i{
       position: fixed;
       top: 0;
@@ -102,12 +103,13 @@ i{
       flex-direction: column;
       flex-grow: 1;
       position: relative;
-      left: 110%;
+      left: 170%;
       width: 300px;
-      transition: all .5s;
+      transition: none;
       &.show-on-mobile{
         // display: block;
         left: 0;
+        transition: all .5s;
       }
       li{
         padding: 30px 0;

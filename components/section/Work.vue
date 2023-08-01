@@ -3,7 +3,8 @@
   const works = useWorks();
 
   let active = ref(0);
-  const activeLine = ref<HTMLElement | null>(null)
+  const activeLine = ref<HTMLElement | null>(null);
+  const activeLineMobile = ref<HTMLElement | null>(null);
 
   let activeWork = ref(works[active.value]);
 
@@ -12,6 +13,16 @@
   watch(active, (newValue)=>{
     if(activeLine.value){
       activeLine.value.style.top = `${active.value * 30}px`;
+    }
+    if(activeLineMobile.value){
+      if(works[active.value]?.company === "EDM Spa"){
+        activeLineMobile.value.style.left = "19px";
+      } else if(works[active.value]?.company === "Freelance"){
+        activeLineMobile.value.style.left = "106px";
+      } else if(works[active.value]?.company === "Boolean Careers"){
+        activeLineMobile.value.style.left = "210px";
+      }
+      activeLineMobile.value.style.width = `${works[active.value]?.company.length * 5}px`;
     }
     
     activeWork.value = works[newValue];
@@ -22,6 +33,9 @@
   <div class="work">
     <div class="list">
       <div ref="activeLine" class="active-line-container">
+        <div class="active-line"></div>
+      </div>
+      <div ref="activeLineMobile" class="active-line-container-mobile">
         <div class="active-line"></div>
       </div>
       <ul>
@@ -98,6 +112,9 @@
           background: $primary;
         }
       }
+      .active-line-container-mobile{
+        display: none;
+      }
     }
     .detail{
       flex-grow: 1;
@@ -146,6 +163,21 @@
         }
         .active-line-container{
           display: none;
+        }
+        .active-line-container-mobile{
+          display: flex;
+          align-items: center;
+          position: absolute;
+          left: 19px;
+          top: 30px;
+          height: 2px;
+          width: 80px;
+          transition: all .3s;
+          .active-line{
+            height: 100%;
+            width: 100%;
+            background: $primary;
+          }
         }
       }
       .detail{
