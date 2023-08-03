@@ -139,7 +139,7 @@
         width: 100%;
         height: 100%;
         border-radius: 5px;
-        background-image: url("~/images/Profile.jpeg");
+        background-image: url("./images/Profile.jpeg");
         background-size: cover;
         background-position: center;
       }

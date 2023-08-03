@@ -1,0 +1,6 @@
+const app_vue_vue_type_style_index_0_lang = "p{line-height:25px}li{list-style:none}a{text-decoration:none}.p-scrolltop{background-color:transparent;border:none;color:#97e1f1;cursor:pointer}body::-webkit-scrollbar{height:10px;width:10px}body::-webkit-scrollbar-track{box-shadow:inset 0 0 6px rgba(0,0,0,.3)}body::-webkit-scrollbar-thumb{background-color:#a9a9a9;border-radius:3px;outline:1px solid #708090}button.animate{background:transparent;border:none;cursor:pointer;margin:18px 0;position:relative}button.animate:hover .button{bottom:10px;left:10px}button.animate .button{background:#282a36;border:1px solid #97e1f1;border-radius:4px;bottom:0;color:#97e1f1;display:block;left:0;padding:18px 25px;position:relative;transition:all .3s}button.animate .background{background-color:#97e1f1;border-radius:4px;height:100%;left:0;position:absolute;top:0;width:100%}html{scroll-behavior:smooth}*{box-sizing:border-box;margin:0;padding:0}body{background:#282a36;color:hsla(60,10%,96%,.8);font-family:Calibre,Inter,San Francisco,SF Pro Text,-apple-system,system-ui,sans-serif;font-size:14px}#app{margin:0 auto;max-width:1200px;overflow-x:hidden;padding:0 10px}";
+
+const appStyles_5478337b = [app_vue_vue_type_style_index_0_lang];
+
+export { appStyles_5478337b as default };
+//# sourceMappingURL=app-styles.5478337b.mjs.map
