@@ -44,6 +44,9 @@
             <div class="menu-desc">{{ menuEl.title }}</div>
           </a>
           </li>
+          <li>
+            <switchLang />
+          </li>
         </ul>
       </div>
     </div>

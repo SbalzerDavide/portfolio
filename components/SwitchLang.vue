@@ -56,6 +56,8 @@
     border-radius: 3px;
     border: 1px solid $text-color;
     .option{
+      display: flex;
+      justify-content: center;
       padding: 4px;
       border-radius: 3px;
       cursor: pointer;
@@ -64,5 +66,15 @@
       }
     }
   }
-
+  @media screen and (max-width: 600px) {
+    .selection{
+      width: 100%;
+      top: 200%;
+      .option{
+        // width: 100px;
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  }
 </style>
