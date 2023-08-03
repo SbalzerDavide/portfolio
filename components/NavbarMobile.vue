@@ -1,6 +1,8 @@
 <script setup>
   const menu = useMenu();
   const mobileMenu = ref(false);
+  const appConfig = useAppConfig();
+
   const detectOutsideClick = useDetectOutsideClick();
 
   function toggleMenuMobile() {
@@ -47,8 +49,20 @@
           <li>
             <switchLang />
           </li>
+          <li>
+            <button class="animate">
+              <div class="background"></div>
+              <a v-if="appConfig.language === 'en'" href="./resume/DavideSbalzer_CV_en.pdf"  target="_blank" class="button">
+                Resume
+              </a>
+              <a v-else-if="appConfig.language === 'it'" href="./resume/DavideSbalzer_CV_it.pdf"  target="_blank" class="button">
+                Resume
+              </a>
+            </button>
+          </li>
         </ul>
       </div>
+
     </div>
   </nav>
 </template>

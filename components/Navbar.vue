@@ -17,14 +17,14 @@
       <!-- <i class="pi pi-home"></i> -->
       <!-- <switchLang /> -->
       <button class="animate">
-      <div class="background"></div>
-      <a v-if="appConfig.language === 'en'" href="./resume/DavideSbalzer_CV_en.pdf"  target="_blank" class="button">
-        Resume
-      </a>
-      <a v-else-if="appConfig.language === 'it'" href="./resume/DavideSbalzer_CV_it.pdf"  target="_blank" class="button">
-        Resume
-      </a>
-    </button>
+        <div class="background"></div>
+        <a v-if="appConfig.language === 'en'" href="./resume/DavideSbalzer_CV_en.pdf"  target="_blank" class="button">
+          Resume
+        </a>
+        <a v-else-if="appConfig.language === 'it'" href="./resume/DavideSbalzer_CV_it.pdf"  target="_blank" class="button">
+          Resume
+        </a>
+      </button>
     </div>
     <div 
       class="navbar-right"

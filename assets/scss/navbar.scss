@@ -13,18 +13,21 @@
 .navbar ul, .navbar-mobile ul{
   display: flex;
   list-style: none;
-  a{
-    display: flex;
-    align-items: center;
-    color: $text-color;
-    margin: 0 20px;
-    text-decoration: none;
-    cursor: pointer;
-    .menu-key{
-      color: $primary;
-      margin-right: 5px;
+    a:not(.button){
+      display: flex;
+      align-items: center;
+      color: $text-color;
+      margin: 0 20px;
+      text-decoration: none;
+      cursor: pointer;
+      .menu-key{
+        color: $primary;
+        margin-right: 5px;
+      }
     }
-  }
+    button{
+      margin: 0 20px;
+    }
 }
 i{
   font-size: 30px;
