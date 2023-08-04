@@ -38,6 +38,16 @@ i{
 }
 
 @media screen and (max-width: 600px) {
+    // i.pi.pi-bars{
+    //   position: fixed;
+    //   top: 0;
+    //   right: 0;
+    //   padding: 20px;
+    //   display: flex;
+    //   align-items: center;
+    //   z-index: 11;
+    // }
+
   .navbar{
     display: none;
   }
@@ -48,6 +58,7 @@ i{
     // bottom: 0;
     left: 0;
     right: 0;
+    height: 0;
     // height: 105px;
     // align-items: center;
     // padding: 20px;
@@ -68,12 +79,14 @@ i{
       display: flex;
       align-items: center;
       position: relative;
+      right: -600px;
       .right-container{
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
       }
       &.navbar-right-mobile{
+        right: 0;
         display: inline-flex;
         height: 100vh;
         flex-direction: row-reverse;
@@ -119,6 +132,10 @@ i{
         .switch-lang{
           margin: 0 20px;
         }
+      }
+      li:last-child{
+        position: fixed;
+        bottom: 0;
       }
     }
   }

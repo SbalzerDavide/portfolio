@@ -6,7 +6,13 @@
   const detectOutsideClick = useDetectOutsideClick();
 
   function toggleMenuMobile() {
+    console.log(mobileMenu.value);
     mobileMenu.value = !mobileMenu.value;
+    console.log(mobileMenu.value);
+    setTimeout(() => {
+    console.log(mobileMenu.value);
+      
+    }, 1000);
   }
 
   const mobileNavbar = ref();
@@ -19,6 +25,7 @@
 </script>
 
 <template>
+    <!-- <i class="pi pi-bars" @click="toggleMenuMobile"></i> -->
   <nav ref="mobileNavbar" class="navbar-mobile">
     <div v-if="mobileMenu" class="mobile-blur"></div>
     <i class="pi pi-bars" @click="toggleMenuMobile"></i>

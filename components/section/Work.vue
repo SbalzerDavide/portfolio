@@ -5,12 +5,7 @@
   let active = ref(0);
   const activeLine = ref<HTMLElement | null>(null);
   const activeLineMobile = ref<HTMLElement | null>(null);
-
-  let activeWork = ref(works[active.value]);
-
-  const appConfig = useAppConfig();
-
-  watch(active, (newValue)=>{
+  function adjustActiveWorkMobile(active: Ref) {
     if(activeLine.value){
       activeLine.value.style.top = `${active.value * 30}px`;
     }
@@ -24,7 +19,18 @@
       }
       activeLineMobile.value.style.width = `${works[active.value]?.company.length * 5}px`;
     }
-    
+  }
+  
+  let activeWork = ref(works[active.value]);
+
+  const appConfig = useAppConfig();
+
+  onMounted(() => {
+    adjustActiveWorkMobile(active)
+  })
+
+  watch(active, (newValue)=>{
+    adjustActiveWorkMobile(active)    
     activeWork.value = works[newValue];
   })
 </script>
