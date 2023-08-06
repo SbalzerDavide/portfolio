@@ -90,7 +90,6 @@
 </template>
 
 <style lang="scss">
-  @import '~/assets/scss/common.scss';
   .work{
     display: flex;
     .list{

@@ -3,6 +3,10 @@
   const appConfig = useAppConfig();
   const detectOutsideClick = useDetectOutsideClick();
 
+  const emit = defineEmits<{
+    (e: 'changeLang', lang: string): void
+  }>()
+
   const languages: string[] = [
     "it",
     "en"
@@ -10,6 +14,7 @@
   const changeLang = (index:number)=>{
     appConfig.language = languages[index];
     showSelect.value = false;
+    emit("changeLang", languages[index])
   }
 
   const switchLang = ref();
@@ -40,10 +45,15 @@
 </template>
 
 <style lang="scss">
-  @import '~/assets/scss/common.scss';
   .active-lang{
     cursor: pointer;
   }
+  .navbar-mobile{
+    .switch-lang{
+      text-align: end;
+    }
+  }
+
   .switch-lang{
     position: relative;
     user-select: none; 

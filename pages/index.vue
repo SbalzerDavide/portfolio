@@ -45,7 +45,6 @@
 </template>
 
 <style lang="scss">
-  @import '~/assets/scss/common.scss';
   .container{
     padding: 0 40px;
   }

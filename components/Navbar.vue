@@ -60,7 +60,6 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '~/assets/scss/common.scss';
   @import '~/assets/scss/navbar.scss';
   img{
     width: 20px;

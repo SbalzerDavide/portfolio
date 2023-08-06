@@ -97,7 +97,6 @@
 </template>
 
 <style lang="scss">
-  @import '~/assets/scss/common.scss';
   .projects{
     .project{
       margin: 40px 0;

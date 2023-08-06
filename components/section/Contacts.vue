@@ -26,7 +26,6 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '~/assets/scss/common.scss';
   h3{
     // text-align: center;
     font-size: 40px;

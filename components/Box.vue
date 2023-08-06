@@ -45,7 +45,6 @@
 </template>
 
 <style lang="scss">
-  @import '~/assets/scss/common.scss';
   .box{
     margin-bottom: 60px;
     min-height: 300px;

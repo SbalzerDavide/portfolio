@@ -6,13 +6,7 @@
   const detectOutsideClick = useDetectOutsideClick();
 
   function toggleMenuMobile() {
-    console.log(mobileMenu.value);
     mobileMenu.value = !mobileMenu.value;
-    console.log(mobileMenu.value);
-    setTimeout(() => {
-    console.log(mobileMenu.value);
-      
-    }, 1000);
   }
 
   const mobileNavbar = ref();
@@ -54,10 +48,10 @@
           </a>
           </li>
           <li>
-            <switchLang />
-          </li>
-          <li>
-            <button class="animate">
+            <button 
+              @click="toggleMenuMobile"
+              class="animate"
+            >
               <div class="background"></div>
               <a v-if="appConfig.language === 'en'" href="./resume/DavideSbalzer_CV_en.pdf"  target="_blank" class="button">
                 Resume
@@ -67,6 +61,9 @@
               </a>
             </button>
           </li>
+          <li>
+            <switchLang @change-lang="toggleMenuMobile"/>
+          </li>
         </ul>
       </div>
 
@@ -75,6 +72,5 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '~/assets/scss/common.scss';
   @import '~/assets/scss/navbar.scss';
 </style>

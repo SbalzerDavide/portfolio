@@ -7,11 +7,7 @@
     "Laravel"
   ]
   const appConfig = useAppConfig();
-  console.log(appConfig);  
 
-  const a = ()=>{
-    console.log("cioane")
-  }
 </script>
 
 <template>
@@ -72,7 +68,6 @@
 </template>
 
 <style lang="scss">
-  @import '~/assets/scss/common.scss';
   .about{
     display: flex;
     // flex-wrap: wrap;

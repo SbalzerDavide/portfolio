@@ -1,7 +1,5 @@
 <script setup lang="ts">
   const appConfig = useAppConfig();
-  console.log(appConfig);  
-  // appConfig.language = "en"
 </script>
 <template>
   <div id="app">
@@ -13,7 +11,6 @@
 </template>
 
 <style lang="scss">
-  @import '~/assets/scss/common.scss';
   html{
     scroll-behavior: smooth;
   }
