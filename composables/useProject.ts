@@ -111,7 +111,7 @@ const projects: Project[] = [
         type: "gitHub"
       },
       {
-        link: "https://sbalzerdavide.github.io/supabaseDist/",
+        link: "https://foodmanagerdemo.netlify.app",
         type: "project"
       }
     ],
