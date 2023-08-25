@@ -143,7 +143,7 @@ const projects: Project[] = [
     name: "Mine Field",
     description: {
       en: "Classic game designed with '80 graphics",
-      it: "Videogame classico sisegnato con una grafica anni '80" 
+      it: "Videogame classico disegnato con una grafica anni '80" 
     },
     link: [
       {
