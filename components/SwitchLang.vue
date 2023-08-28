@@ -3,7 +3,6 @@
 
   const showSelect = ref(false);
   const appConfig = useAppConfig();
-  const detectOutsideClick = useDetectOutsideClick();
 
   const emit = defineEmits<{
     (e: 'changeLang', lang: string): void
@@ -23,10 +22,6 @@
   onClickOutside(switchLang, (event) =>{
     showSelect.value = false;
   })
-
-  // detectOutsideClick(switchLang, () => { 
-  //   showSelect.value = false;
-  // })
 
  </script>
 

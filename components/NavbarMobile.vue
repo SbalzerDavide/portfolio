@@ -1,16 +1,10 @@
 <script setup>
-
   import { onClickOutside } from '@vueuse/core'
-  
-  // import { vOnClickOutside } from '@vueuse/components'
-
   
   const menu = useMenu();
   const mobileMenu = ref(false);
   const appConfig = useAppConfig();
-  
-  const detectOutsideClick = useDetectOutsideClick();
-  
+    
   function toggleMenuMobile() {
     mobileMenu.value = !mobileMenu.value;
   }
@@ -22,12 +16,6 @@
       mobileMenu.value = false;
     }
   })
-
-  // detectOutsideClick(mobileNavbar, () => { 
-  //   if(mobileMenu.value === true){
-  //     mobileMenu.value = false;
-  //   }
-  // })
 
 </script>
 
