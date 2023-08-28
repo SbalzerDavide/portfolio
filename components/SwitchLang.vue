@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import { onClickOutside } from '@vueuse/core'
+
   const showSelect = ref(false);
   const appConfig = useAppConfig();
   const detectOutsideClick = useDetectOutsideClick();
@@ -18,9 +20,13 @@
   }
 
   const switchLang = ref();
-  detectOutsideClick(switchLang, () => { 
+  onClickOutside(switchLang, (event) =>{
     showSelect.value = false;
   })
+
+  // detectOutsideClick(switchLang, () => { 
+  //   showSelect.value = false;
+  // })
 
  </script>
 
