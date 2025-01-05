@@ -59,6 +59,7 @@
         <div class="project-section">
           <h4>Personal Project</h4>
           <h2>{{ project.name }}</h2>
+          <p>{{ project.year }}</p>
           <div class="project-desc">
             <p v-if="appConfig.language == 'en'">
               {{ project.description.en }}
@@ -119,6 +120,17 @@
         .project-image.portrait{
           left: 25%;
         }
+        .many-images .image-container{
+          &:nth-child(2){
+            left: 100px;
+          }
+          &:nth-child(3){
+            left: 200px;
+          }
+          &:nth-child(4){
+            left: 300px;
+          }
+        }
       }
       &:nth-child(even){
         .project-image{
@@ -126,6 +138,21 @@
         }
         li{
           margin-right: 18px;
+        }
+        .many-images .image-container{
+          &:nth-child(1){
+            right: 0;
+          }
+          &:nth-child(2){
+            right: 100px;
+          }
+          &:nth-child(3){
+            right: 200px;
+          }
+          &:nth-child(4){
+            right: 300px;
+          }
+
         }
       }
       .project-section{
@@ -143,19 +170,16 @@
           transition: all .3s;
           z-index: 2;
           &:nth-child(2){
-            left: 100px;
             top: -10px;
             height: 320px;
             z-index: 3;
           }
           &:nth-child(3){
-            left: 200px;
             height: 340px;
             top: -20px;
             z-index: 4;
           }
           &:nth-child(4){
-            left: 300px;
             height: 360px;
             top: -30px;
             z-index: 5;
@@ -212,7 +236,7 @@
       .project-desc{
         padding: 18px;
         background-color: rgb(52, 55, 70);
-        margin: 20px 0;
+        margin: 10px 0 20px 0;
         border-radius: 3px;
         box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.2);
       }

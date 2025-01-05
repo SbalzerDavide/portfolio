@@ -14,11 +14,30 @@ interface Work {
 
 const works: Work[] = [
   {
+    company: "Neosperience",
+    role: "Frontend Developer",
+    companyLink: "https://www.neosperience.com/",
+    start: "October 2023",
+    end: "Present",
+    descriptions: {
+      en: [
+        "Frontend development of web apps, based on Vue.js or Angular, customized to meet clients’ needs.",
+        "Technical analysis to find frontend development solutions suitable for different projects.",
+        "Development, maintenance, and implementation in projects of a proprietary product, based on Vue.js, primarily designed for eCommerce."
+      ],
+      it: [
+        "Sviluppo frontend di web app, basate su Vue.js o Angular, customizzate sulle esigenze dei clienti.",
+        "Analisi tecnica per trovare soluzioni tecnologiche di sviluppo frontend adatte a differenti progetti.",
+        "Sviluppo, manutenzione e applicazione in progetti di un prodotto proprietario, basato su Vue.js,  progettato principalmente per eCommerce."
+      ]
+    } 
+  },
+  {
     company: "EDM Spa",
     role: "Full Stack Developer",
     companyLink: "https://edm.it/",
     start: "March 2021",
-    end: "Present",
+    end: "October 2023",
     descriptions: {
       en: [
         "Design, maintenance and updating of a web application that makes management software available on every device.",
@@ -36,7 +55,7 @@ const works: Work[] = [
     company: "Freelance",
     role: "Frontend Developer",
     start: "January 2021",
-    end: "April 2023",
+    end: "Present",
     descriptions: {
       en: [
        "I work in various projects, from the smallest, maybe only for study a new language or technology, to 'real product' witch are born from a specific use and witch are used to help everyday work.",

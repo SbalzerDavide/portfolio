@@ -24,6 +24,10 @@ interface Project {
 
 import rotellaOstetrica from "~/assets/images/rotellaOstetrica.png";
 
+import trackifyIt1 from "~/assets/images/trackifyIt1.png"
+import trackifyIt2 from "~/assets/images/trackifyIt2.png"
+import trackifyIt3 from "~/assets/images/trackifyIt3.png"
+
 import formForPrint from "~/assets/images/formForPrint.png";
 import formForPrint1 from "~/assets/images/formForPrint1.png";
 import formForPrint2 from "~/assets/images/formForPrint2.png";
@@ -37,6 +41,43 @@ import minefield from "~/assets/images/minefield.png";
 import minefield1 from "~/assets/images/minefield1.png";
 
 const projects: Project[] = [
+  {
+    name: "Trackify it",
+    description:{
+      en: "Web app that allows users to track custom entities over time and monitor them through visualizations in charts across different time ranges.",
+      it: "Web app che permette di tener traccia nel tempo di entità personalizzate e di monitorarle tramite visulizzazioni in grafici di differenti range temporali"
+    },
+    link: [
+      {
+        link: "https://github.com/SbalzerDavide/Trackify-it",
+        type: "gitHub",
+      },
+      {
+        link: "https://trackify-it.netlify.app/",
+        type: "project",
+      },
+    ],
+    technology: [
+      "Angular 18",
+      "Angular Material",
+      "Supabase"
+    ],
+    img:[
+      {
+        img: trackifyIt3,
+        direction: "portrait" 
+      },
+      {
+        img: trackifyIt1,
+        direction: "portrait" 
+      },
+      {
+        img: trackifyIt2,
+        direction: "portrait" 
+      }
+    ],
+    year: "2024" 
+  },
   {
     name: "Rotella ostetrica",
     description:{
