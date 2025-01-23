@@ -31,4 +31,7 @@ export default defineNuxtConfig({
 
   css: ["primeicons/primeicons.css", "@/assets/scss/common.scss"],
   compatibilityDate: "2025-01-23",
+  nitro: {
+    preset: 'netlify'
+  }
 });
