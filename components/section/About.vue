@@ -23,7 +23,6 @@
           <li 
             v-for="(el, index) in techList"
             :key="index"
-            @click="a"
           >
             <i class="pi pi-caret-right"></i>
             {{ el }}
@@ -107,7 +106,7 @@
         width: 100%;
         height: 100%;
         border-radius: 5px;
-        background-image: url("~/assets/images/Profile.jpeg");
+        background-image: url("/images/Profile.jpeg");
         background-size: cover;
         background-position: center;
       }
