@@ -13,7 +13,7 @@ interface Languages {
   it: string
 }
 
-interface Project {
+export interface Project {
   name: string, 
   description: Languages, 
   link?: ProjLink[], 
@@ -214,5 +214,3 @@ const projects: Project[] = [
 ]
 
 export const useProject = ()=> projects;
-
-export { Project }

@@ -3,7 +3,6 @@
   
   const menu = useMenu();
   const mobileMenu = ref(false);
-  const appConfig = useAppConfig();
     
   function toggleMenuMobile() {
     mobileMenu.value = !mobileMenu.value;
@@ -54,10 +53,10 @@
               class="animate"
             >
               <div class="background"></div>
-              <a v-if="appConfig.language === 'en'" href="./resume/DavideSbalzer_CV_en.pdf"  target="_blank" class="button">
+              <a v-if="$i18n.locale === 'en'" href="./resume/DavideSbalzer_CV_en.pdf"  target="_blank" class="button">
                 Resume
               </a>
-              <a v-else-if="appConfig.language === 'it'" href="./resume/DavideSbalzer_CV_it.pdf"  target="_blank" class="button">
+              <a v-else-if="$i18n.locale === 'it'" href="./resume/DavideSbalzer_CV_it.pdf"  target="_blank" class="button">
                 Resume
               </a>
             </button>

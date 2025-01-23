@@ -23,8 +23,6 @@
   
   let activeWork = ref(works[active.value]);
 
-  const appConfig = useAppConfig();
-
   onMounted(() => {
     adjustActiveWorkMobile(active)
   })
@@ -67,23 +65,12 @@
       <div class="work-desc-container">
         <div 
           class="work-desc"
-          v-if="appConfig.language == 'en'"
-          v-for="(desc, index) in activeWork.descriptions.en"
+          v-for="(desc, index) in activeWork.descriptions[$i18n.locale]"
           :key="index"
         >
           <i class="pi pi-caret-right"></i>
           <p>{{ desc }}</p>
         </div>
-        <div 
-          class="work-desc"
-          v-else-if="appConfig.language == 'it'"
-          v-for="(desc, i) in activeWork.descriptions.it"
-          :key="i"
-        >
-          <i class="pi pi-caret-right"></i>
-          <p>{{ desc }}</p>
-        </div>
-
       </div>
     </div>
   </div>

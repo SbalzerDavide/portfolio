@@ -1,10 +1,7 @@
 <script setup lang="ts">
-
   const projects = useProject();
 
-  import { Project } from "~/composables/useProject"
-
-  const appConfig = useAppConfig();
+  import { useProject } from '#imports';
 
   function openProject(project: Project) {
     let projLink = project.link?.find((el)=> el.type === "project");
@@ -61,11 +58,8 @@
           <h2>{{ project.name }}</h2>
           <p>{{ project.year }}</p>
           <div class="project-desc">
-            <p v-if="appConfig.language == 'en'">
-              {{ project.description.en }}
-            </p>
-            <p v-else-if="appConfig.language == 'it'">
-              {{ project.description.it }}
+            <p>
+              {{ project.description[$i18n.locale] }}
             </p>
           </div>
         </div>

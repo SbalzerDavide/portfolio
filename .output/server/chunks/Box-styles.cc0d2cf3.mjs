@@ -1,6 +1,0 @@
-const Box_vue_vue_type_style_index_0_lang = "p{line-height:25px}li{list-style:none}a{text-decoration:none}.p-scrolltop{background-color:transparent;border:none;color:#97e1f1;cursor:pointer}body::-webkit-scrollbar{height:10px;width:10px}body::-webkit-scrollbar-track{box-shadow:inset 0 0 6px rgba(0,0,0,.3)}body::-webkit-scrollbar-thumb{background-color:#a9a9a9;border-radius:3px;outline:1px solid #708090}button.animate{background:transparent;border:none;cursor:pointer;margin:18px 0;position:relative}button.animate:hover .button{bottom:10px;left:10px}button.animate .button{background:#282a36;border:1px solid #97e1f1;border-radius:4px;bottom:0;color:#97e1f1;display:block;left:0;padding:18px 25px;position:relative;transition:all .3s}button.animate .background{background-color:#97e1f1;border-radius:4px;height:100%;left:0;position:absolute;top:0;width:100%}.box{margin-bottom:60px;min-height:300px}.box .title{color:#97e1f1;font-family:Menlo,Monaco,Courier New,monospace;font-size:18px;margin-bottom:20px;padding-top:20px}.box:nth-child(odd){margin-left:80px}@media screen and (max-width:600px){.box:nth-child(odd){margin-left:0}}";
-
-const BoxStyles_cc0d2cf3 = [Box_vue_vue_type_style_index_0_lang];
-
-export { BoxStyles_cc0d2cf3 as default };
-//# sourceMappingURL=Box-styles.cc0d2cf3.mjs.map

@@ -1,19 +1,19 @@
 <script setup lang="ts">
   import { onClickOutside } from '@vueuse/core'
+  const { setLocale } = useI18n()
 
   const showSelect = ref(false);
-  const appConfig = useAppConfig();
 
   const emit = defineEmits<{
     (e: 'changeLang', lang: string): void
   }>()
 
-  const languages: string[] = [
+  const languages: ('it' | 'en')[] = [
     "it",
     "en"
   ]
   const changeLang = (index:number)=>{
-    appConfig.language = languages[index];
+    setLocale(languages[index])
     showSelect.value = false;
     emit("changeLang", languages[index])
   }
@@ -31,7 +31,7 @@
       class="active-lang"
       @click="showSelect = !showSelect"
     >
-      {{ appConfig.language }}
+      {{ $i18n.locale }}
     </div>
     <div v-show="showSelect" class="selection">
       <div 
